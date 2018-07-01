@@ -1,8 +1,8 @@
 package lib.ui;
 
-import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 abstract public class MyListsPageObject extends MainPageObject {
 
@@ -20,7 +20,7 @@ abstract public class MyListsPageObject extends MainPageObject {
         return By.xpath(ARTICLE_BY_TITLE_TPL.replace("{TITLE}", title));
     }
 
-    public MyListsPageObject(AppiumDriver driver) {
+    public MyListsPageObject(WebDriver driver) {
         super(driver);
     }
 

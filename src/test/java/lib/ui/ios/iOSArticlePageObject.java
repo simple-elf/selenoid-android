@@ -1,8 +1,8 @@
 package lib.ui.ios;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.ArticlePageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class iOSArticlePageObject extends ArticlePageObject {
 
@@ -19,7 +19,7 @@ public class iOSArticlePageObject extends ArticlePageObject {
         TITLE_TPL = "//XCUIElementTypeWebView//XCUIElementTypeOther[@name='{TITLE}']/XCUIElementTypeStaticText[@name='{TITLE}']";
     }
 
-    public iOSArticlePageObject(AppiumDriver driver) {
+    public iOSArticlePageObject(WebDriver driver) {
         super(driver);
     }
 

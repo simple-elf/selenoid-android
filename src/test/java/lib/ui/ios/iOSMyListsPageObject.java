@@ -1,8 +1,8 @@
 package lib.ui.ios;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.MyListsPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class iOSMyListsPageObject extends MyListsPageObject {
 
@@ -12,7 +12,7 @@ public class iOSMyListsPageObject extends MyListsPageObject {
         ARTICLE_BY_TITLE_TPL = "//XCUIElementTypeLink[contains(@name,'{TITLE}')]";
     }
 
-    public iOSMyListsPageObject(AppiumDriver driver) {
+    public iOSMyListsPageObject(WebDriver driver) {
         super(driver);
     }
 

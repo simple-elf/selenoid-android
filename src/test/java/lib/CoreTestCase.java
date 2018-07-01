@@ -4,10 +4,11 @@ import io.appium.java_client.AppiumDriver;
 import junit.framework.TestCase;
 import lib.ui.WelcomePageObject;
 import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.WebDriver;
 
 public class CoreTestCase extends TestCase {
 
-    protected AppiumDriver driver;
+    protected WebDriver driver;
 
     @Override
     protected void setUp() throws Exception {
@@ -27,15 +28,15 @@ public class CoreTestCase extends TestCase {
     }
 
     protected void rotateScreenPortrait() {
-        driver.rotate(ScreenOrientation.PORTRAIT);
+        ((AppiumDriver) driver).rotate(ScreenOrientation.PORTRAIT);
     }
 
     protected void rotateScreenLandscape() {
-        driver.rotate(ScreenOrientation.LANDSCAPE);
+        ((AppiumDriver) driver).rotate(ScreenOrientation.LANDSCAPE);
     }
 
     protected void backgroundApp(int seconds) {
-        driver.runAppInBackground(seconds);
+        ((AppiumDriver) driver).runAppInBackground(seconds);
     }
 
     private void skipWelcomePageForIOSApp() {

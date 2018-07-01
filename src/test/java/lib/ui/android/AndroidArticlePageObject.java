@@ -1,8 +1,8 @@
 package lib.ui.android;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.ArticlePageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class AndroidArticlePageObject extends ArticlePageObject {
 
@@ -17,7 +17,7 @@ public class AndroidArticlePageObject extends ArticlePageObject {
         SAVED_READING_LIST_BY_NAME_TPL = "//android.widget.TextView[@text='{NAME}']";
     }
 
-    public AndroidArticlePageObject(AppiumDriver driver) {
+    public AndroidArticlePageObject(WebDriver driver) {
         super(driver);
     }
 

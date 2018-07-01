@@ -6,6 +6,7 @@ import lib.Platform;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,9 +15,9 @@ import java.util.List;
 
 public class MainPageObject {
 
-    protected AppiumDriver driver;
+    protected WebDriver driver;
 
-    public MainPageObject(AppiumDriver driver) {
+    public MainPageObject(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -49,7 +50,7 @@ public class MainPageObject {
 
         int pointClickX = (rightX + width) - 3;
         int pointClickY = middleY;
-        TouchAction action = new TouchAction(driver);
+        TouchAction action = new TouchAction((AppiumDriver) driver);
         action.tap(pointClickX, pointClickY).perform();
     }
 
@@ -65,7 +66,7 @@ public class MainPageObject {
         int lowerY = upperY + element.getSize().getHeight();
         int middleY = (upperY + lowerY) / 2;
 
-        TouchAction action = new TouchAction(driver);
+        TouchAction action = new TouchAction((AppiumDriver) driver);
         action.press(rightX, middleY).waitAction(150);
 
         if (Platform.getInstance().isAndroid()) {
@@ -114,7 +115,7 @@ public class MainPageObject {
     }
 
     protected void swipeUp(int timeOfSwipe) {
-        TouchAction action = new TouchAction(driver);
+        TouchAction action = new TouchAction((AppiumDriver) driver);
         Dimension size = driver.manage().window().getSize();
         int x = size.width / 2;
         int startY = (int) (size.height * 0.7);

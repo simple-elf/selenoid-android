@@ -1,10 +1,10 @@
 package lib.ui;
 
-import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -27,7 +27,7 @@ abstract public class SearchPageObject extends MainPageObject {
             SEARCH_RESULT_BY_SUBSTRING_TPL,
             SEARCH_RESULT_BY_TITLE_AND_DESCRIPTION;
 
-    public SearchPageObject(AppiumDriver driver) {
+    public SearchPageObject(WebDriver driver) {
         super(driver);
     }
 

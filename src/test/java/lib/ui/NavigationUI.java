@@ -1,13 +1,13 @@
 package lib.ui;
 
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 abstract public class NavigationUI extends MainPageObject {
 
     protected static By MY_LISTS_LINK;
 
-    public NavigationUI(AppiumDriver driver) {
+    public NavigationUI(WebDriver driver) {
         super(driver);
     }
 

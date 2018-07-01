@@ -3,9 +3,8 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.Set;
 
 abstract public class ArticlePageObject extends MainPageObject {
 
@@ -29,7 +28,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         return By.xpath(SAVED_READING_LIST_BY_NAME_TPL.replace("{NAME}", nameOfReadingList));
     }
 
-    public ArticlePageObject(AppiumDriver driver) {
+    public ArticlePageObject(WebDriver driver) {
         super(driver);
     }
 
@@ -45,8 +44,8 @@ abstract public class ArticlePageObject extends MainPageObject {
         System.out.println(new java.util.Date());
         for (int i = 0; i < 10; i++) {
             try {
-                System.out.println(driver.getContext());
-                System.out.println(driver.getContextHandles());
+                System.out.println(((AppiumDriver) driver).getContext());
+                System.out.println(((AppiumDriver) driver).getContextHandles());
             } catch (Exception e) {
                 e.printStackTrace();
             }

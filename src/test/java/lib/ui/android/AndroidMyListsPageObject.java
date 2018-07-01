@@ -1,8 +1,8 @@
 package lib.ui.android;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.MyListsPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class AndroidMyListsPageObject extends MyListsPageObject {
 
@@ -13,7 +13,7 @@ public class AndroidMyListsPageObject extends MyListsPageObject {
         ARTICLE_BY_TITLE_TPL = "//*[@text='{TITLE}']";
     }
 
-    public AndroidMyListsPageObject(AppiumDriver driver) {
+    public AndroidMyListsPageObject(WebDriver driver) {
         super(driver);
     }
 

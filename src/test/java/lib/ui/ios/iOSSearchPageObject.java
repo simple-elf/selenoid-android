@@ -1,8 +1,8 @@
 package lib.ui.ios;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.SearchPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class iOSSearchPageObject extends SearchPageObject {
 
@@ -31,7 +31,7 @@ public class iOSSearchPageObject extends SearchPageObject {
                 "//XCUIElementTypeLink[contains(@name, '{TITLE}')][contains(@name, '{DESCRIPTION}')]";
     }
 
-    public iOSSearchPageObject(AppiumDriver driver) {
+    public iOSSearchPageObject(WebDriver driver) {
         super(driver);
     }
 

@@ -1,7 +1,7 @@
 package lib.ui;
 
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class WelcomePageObject extends MainPageObject {
 
@@ -14,7 +14,7 @@ public class WelcomePageObject extends MainPageObject {
             SKIP_LINK = By.id("Skip"),
             GET_STARTED_BUTTON = By.id("Get started");
 
-    public WelcomePageObject(AppiumDriver driver) {
+    public WelcomePageObject(WebDriver driver) {
         super(driver);
     }
 

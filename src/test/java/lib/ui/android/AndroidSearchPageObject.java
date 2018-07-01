@@ -1,8 +1,8 @@
 package lib.ui.android;
 
-import io.appium.java_client.AppiumDriver;
 import lib.ui.SearchPageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class AndroidSearchPageObject extends SearchPageObject {
 
@@ -27,7 +27,7 @@ public class AndroidSearchPageObject extends SearchPageObject {
                 "../*[@resource-id='org.wikipedia:id/page_list_item_description'][@text='{DESCRIPTION}']";
     }
 
-    public AndroidSearchPageObject(AppiumDriver driver) {
+    public AndroidSearchPageObject(WebDriver driver) {
         super(driver);
     }
 
